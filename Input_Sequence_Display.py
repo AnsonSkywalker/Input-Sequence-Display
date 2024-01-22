@@ -17,25 +17,25 @@ def on_press(key):
                 key = "CTRL"
             elif key == Key.shift_l:
                 key = "SHIFT" 
-            elif key.char == "w":
+            elif key.char.lower() == "w":
                 key = "W"
-            elif key.char == "a":
+            elif key.char.lower() == "a":
                 key = "A"
-            elif key.char == "s":
+            elif key.char.lower() == "s":
                 key = "S"
-            elif key.char == "d":
+            elif key.char.lower() == "d":
                 key = "D"
-            elif key.char == "q":
+            elif key.char.lower() == "q":
                 key = "Q"
-            elif key.char == "e":
+            elif key.char.lower() == "e":
                 key = "E"
-            elif key.char == "f":
+            elif key.char.lower() == "f":
                 key = "F"
-            elif key.char == "r":
+            elif key.char.lower() == "r":
                 key = "R"
-            elif key.char == "g":
+            elif key.char.lower() == "g":
                 key = "G"
-            elif key.char == "x":
+            elif key.char.lower() == "x":
                 key = "X"
             else:
                 flag = False
