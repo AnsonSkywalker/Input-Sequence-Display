@@ -37,6 +37,14 @@ def on_press(key):
                 key = "G"
             elif key.char.lower() == "x":
                 key = "X"
+            elif key.char == "\x17": # Ctrl+W
+                key = "W"
+            elif key.char == "\x01": # Ctrl+A
+                key = "A"
+            elif key.char == "\x13": # Ctrl+S
+                key = "S"
+            elif key.char == "\x04": # Ctrl+D
+                key = "D"
             else:
                 flag = False
         except AttributeError:
