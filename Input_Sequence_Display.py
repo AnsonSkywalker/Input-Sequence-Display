@@ -10,33 +10,36 @@ def on_press(key):
     if key not in keys_currently_pressed:
         keys_currently_pressed.append(key)
         flag = True
-        if key == Key.space:
-            key = "空格"
-        elif key == Key.ctrl_l:
-            key = "CTRL"
-        elif key == Key.shift_l:
-            key = "SHIFT" 
-        elif key.char == "w":
-            key = "W"
-        elif key.char == "a":
-            key = "A"
-        elif key.char == "s":
-            key = "S"
-        elif key.char == "d":
-            key = "D"
-        elif key.char == "q":
-            key = "Q"
-        elif key.char == "e":
-            key = "E"
-        elif key.char == "f":
-            key = "F"
-        elif key.char == "r":
-            key = "R"
-        elif key.char == "g":
-            key = "G"
-        elif key.char == "x":
-            key = "X"
-        else:
+        try:
+            if key == Key.space:
+                key = "空格"
+            elif key == Key.ctrl_l:
+                key = "CTRL"
+            elif key == Key.shift_l:
+                key = "SHIFT" 
+            elif key.char == "w":
+                key = "W"
+            elif key.char == "a":
+                key = "A"
+            elif key.char == "s":
+                key = "S"
+            elif key.char == "d":
+                key = "D"
+            elif key.char == "q":
+                key = "Q"
+            elif key.char == "e":
+                key = "E"
+            elif key.char == "f":
+                key = "F"
+            elif key.char == "r":
+                key = "R"
+            elif key.char == "g":
+                key = "G"
+            elif key.char == "x":
+                key = "X"
+            else:
+                flag = False
+        except AttributeError:
             flag = False
         #else:
         #    key = str(key)
