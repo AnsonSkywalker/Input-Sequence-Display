@@ -8,6 +8,7 @@ time_last = time.time_ns()
 time_now = 0
 
 tickrate = 60 # 每一秒钟记为多少帧
+wait = 5 # 超过多少秒没有输入即重置计数器
 
 def on_press(key):
     global count,time_last,time_now
@@ -59,7 +60,9 @@ def on_press(key):
         #    key = key.upper()    
         if flag:
             time_now=time.time_ns()
-            count = int((time_now - time_last)/1000000000*tickrate) % 1000 # 帧计数器显然没有那么长的显示需求，所以对一千取模
+            count = int((time_now - time_last)/1000000000*tickrate)
+            if count>(wait*tickrate):
+                count = 9999 # 意为此帧间隔无效
             print(count,"帧 ",format(key),flush = True)
             time_last = time_now    
 
