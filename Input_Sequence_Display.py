@@ -100,7 +100,7 @@ def on_press(key):
                 key = "D"
             else:
                 flag = False
-        except AttributeError:
+        except:
             flag = False
         #else:
         #    key = str(key)
@@ -115,7 +115,6 @@ def on_press(key):
             time_last = time_now    
 
 def on_release(key):
-    global n
     if key in keys_currently_pressed:
         keys_currently_pressed.remove(key)
     #print(key, '键抬起')
