@@ -17,10 +17,6 @@ wait = 5 # 超过多长时间没有输入就忽略本次计数，单位秒
 
 sys.stdout = buffer
 
-def refresh_pressed(props, prop):
-    print("Refresh Pressed")
-    update_text()
-
 def update_text():
     global source_name
 
@@ -47,8 +43,7 @@ def script_properties():
 				obs.obs_property_list_add_string(p, name, name)
 
 		obs.source_list_release(sources)
-
-	obs.obs_properties_add_button(props, "button", "Refresh", refresh_pressed)
+          
 	return props
 
 def script_update(settings):
@@ -57,6 +52,9 @@ def script_update(settings):
     obs.timer_remove(update_text)
     if source_name != "":
         obs.timer_add(update_text, 1)
+
+def script_description():
+	return "在OBS内以滚动序列形式显示用户键盘输入\nDisplay the user's keyboard input in a scrolling sequence\n\nBy Anson_Skywalker"
 
 def on_press(key):
     global count,time_last,time_now
@@ -100,12 +98,14 @@ def on_press(key):
                 key = "D"
             else:
                 flag = False
+            '''
+            else:
+                key = str(key)
+                key = key.replace("'", "")
+                key = key.upper()
+            '''
         except:
-            flag = False
-        #else:
-        #    key = str(key)
-        #    key = key.replace("'", "")
-        #    key = key.upper()    
+            flag = False  
         if flag:
             time_now=time.time_ns()
             count = int((time_now - time_last)/1000000000*tickrate)
