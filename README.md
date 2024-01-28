@@ -8,9 +8,9 @@
 
     <img src="./readme/2.png" style="height:400px">
 
-3. 在OBS顶部工具栏中由“工具”栏进入“脚本”。请事先安装Python环境，这部分不包含在本指引内。
+3. 在OBS顶部工具栏中由“工具”栏进入“脚本”。请事先安装Python环境，这部分不包含在本指引内。如果您不会安装Python，请查阅https://cnm.buhuibaidu.me/?s=Python%20%E5%AE%89%E8%A3%85
 
-    <img src="./readme/3.png" style="width:200px">
+    <img src="./readme/3.png" style="width:400px">
 
 4. 在脚本窗口的左下角点击“添加脚本”图标
 
@@ -26,13 +26,15 @@
 
 7. 按照你的需求自行编辑文本源的其他项目。如果需要在不重启OBS的前提下将序列显示重置回初始状态，请在“脚本”工具窗口左下角点击“重新载入脚本”图标
 
+----
+
 The English version is directly translated from Chinese, so I cannot guarantee that the interface text shown in the guide is the same as the actual English version of the OBS interface text.
 
 Usage:
 
 1. Download the script file Input_Sequence_Display.py, no matter you want to Clone the repository or just copy and paste the source code manually. For ease of management, it is recommended to store the script file in the default script storage path of OBS (..\obs-studio\data\obs-plugins\frontend-tools\scripts).
 2. Start OBS and add a text source to the scene.
-3. Click on "Tools" in the toolbar at the top of OBS, then click on "Scripts". Please install the Python environment beforehand, this part is not included in this guide.
+3. Click on "Tools" in the toolbar at the top of OBS, then click on "Scripts". Please install the Python environment beforehand, this part is not included in this guide. If you don't know how to install Python, Use The Fxxking Google.
 4. Click the "Add Script" icon in the lower left corner of the Scripts window.
 5. Select the text source in the right configuration area to bind the script to the text source, and then close the Scripts window to return to the main OBS interface.
 6. In the source editor, select the text source you just bind and right-click the source and "Settings" to edit the source, then click the "Chat Mode" checkbox in the pop-up editing window.
