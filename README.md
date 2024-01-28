@@ -8,7 +8,7 @@
 
     <img src="./readme/2.png" style="height:400px">
 
-3. 在OBS顶部工具栏中由“工具”栏进入“脚本”。请事先安装Python环境，这部分不包含在本指引内。如果您不会安装Python，请查阅https://cnm.buhuibaidu.me/?s=Python%20%E5%AE%89%E8%A3%85
+3. 在OBS顶部工具栏中由“工具”栏进入“脚本”。请事先安装Python环境，这部分不包含在本指引内。如果您不会安装Python，请查阅[Python安装教程](https://cnm.buhuibaidu.me/?s=Python%20%E5%AE%89%E8%A3%85)
 
     <img src="./readme/3.png" style="width:400px">
 
