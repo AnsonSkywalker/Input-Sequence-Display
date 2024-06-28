@@ -12,23 +12,27 @@
 
     <img src="./readme/3.png" style="width:400px">
 
-4. 在脚本窗口的左下角点击“添加脚本”图标
+4. 安装Pynput库，如果您的计算机上已经安装过了此库可以略过此步骤。使用`Win`+`R`组合快捷键打开“运行”窗口输入`cmd`，或是用其他您更加惯用的方式启动命令提示符。在弹出的控制台窗口中输入`pip install pynput`以安装Pynput库。出现“Successfully installed pynput”等字样即为安装成功。
+
+    <img src="./readme/install pynput.png" style="width:800px">
+   
+5. 在脚本窗口的左下角点击“添加脚本”图标
 
     <img src="./readme/4.png" style="width:600px">
 
-5. 在右侧配置区域选择此文本源以将脚本和文本源绑定在一起，然后关闭脚本窗口返回OBS主界面
+6. 在右侧配置区域选择此文本源以将脚本和文本源绑定在一起，然后关闭脚本窗口返回OBS主界面
 
     <img src="./readme/5.png" style="width:400px">
 
-6. 在来源编辑器中点击“设置”以编辑文本源，在弹出的编辑窗口中勾选“聊天模式”复选框
+7. 在来源编辑器中点击“设置”以编辑文本源，在弹出的编辑窗口中勾选“聊天模式”复选框
 
     <img src="./readme/6.png" style="width:600px">
 
-7. 按照你的需求自行编辑文本源的其他项目。如果需要在不重启OBS的前提下将序列显示重置回初始状态，请在“脚本”工具窗口左下角点击“重新载入脚本”图标
+8. 按照你的需求自行编辑文本源的其他项目。如果需要在不重启OBS的前提下将序列显示重置回初始状态，请在“脚本”工具窗口左下角点击“重新载入脚本”图标
 
 ## 其他说明：
 
-计时器用的是time库的time_ns()函数，计时精度为纳秒量级，百分之一秒左右的工作场景下绰绰有余。开发此脚本时我本地工作环境的Python版本是3.10。time.time_ns()函数应该是3.7版本引入，因此在您的电脑上部署时理论需要的最低Python版本即为Python3.7。
+计时器用的是time库的time_ns()函数，计时精度为纳秒量级，百分之一秒左右的工作场景下不能说绰绰有余而是杀鸡用牛刀。开发此脚本时我本地工作环境的Python版本是3.10。time.time_ns()函数应该是3.7版本引入，因此在您的电脑上部署时理论需要的最低Python版本即为Python3.7。
 
 默认配置每秒钟计为60帧，超时等待5秒钟没有有效键位输入就计为9999帧。OBS内的脚本配置区除了链接文本源没做任何其他自定义。如果需要自定义这两个数值以及自定义其他内容（例如哪些键位输入操作会视为有效输入）请自己改.py文件。
 
@@ -45,10 +49,11 @@ The English version is directly translated from Chinese, so I cannot guarantee t
 1. Download the script file Input_Sequence_Display.py, no matter you want to Clone the repository or just copy and paste the source code manually. For ease of management, it is recommended to store the script file in the default script storage path of OBS (..\obs-studio\data\obs-plugins\frontend-tools\scripts).
 2. Start OBS and add a text source to the scene.
 3. Click on "Tools" in the toolbar at the top of OBS, then click on "Scripts". Please install the Python environment beforehand, this part is not included in this guide. If you don't know how to install Python, Use The Fxxking Google.
-4. Click the "Add Script" icon in the lower left corner of the Scripts window.
-5. Select the text source in the right configuration area to bind the script to the text source, and then close the Scripts window to return to the main OBS interface.
-6. In the source editor, select the text source you just bind and right-click the source and "Settings" to edit the source, then click the "Chat Mode" checkbox in the pop-up editing window.
-7. Edit other items of the text source according to your needs. If you need to reset the sequence display back to its default state without restarting OBS, please click the "Reload Script" icon in the lower left corner of the "Scripts" tool window.
+4. Install the Pynput library, or skip this step if it is already installed on your computer. Use the `Win` + `R` shortcut to open a Run window and type `cmd`, or launch a Command Prompt in a way you are more comfortable with. In the console window, type `pip install pynput` to install the Pynput library. The message "Successfully installed pynput" will appear to indicate a successful installation.
+5. Click the "Add Script" icon in the lower left corner of the Scripts window.
+6. Select the text source in the right configuration area to bind the script to the text source, and then close the Scripts window to return to the main OBS interface.
+7. In the source editor, select the text source you just bind and right-click the source and "Settings" to edit the source, then click the "Chat Mode" checkbox in the pop-up editing window.
+8. Edit other items of the text source according to your needs. If you need to reset the sequence display back to its default state without restarting OBS, please click the "Reload Script" icon in the lower left corner of the "Scripts" tool window.
 
 ## Other notes:
 
